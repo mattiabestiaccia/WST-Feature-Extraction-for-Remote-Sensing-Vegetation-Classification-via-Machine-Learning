@@ -1,0 +1,130 @@
+{
+  "experiment_name": "advanced_stats_sunset_k10_WithModel",
+  "config": {
+    "dataset_path": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_speckle_35/original",
+    "area_name": "sunset",
+    "feature_method": "advanced_stats",
+    "k_features": 10,
+    "output_dir": "/home/brusc/Projects/random_forest/experiments_organized/speckle_output/dataset_rgb_speckle_35/sunset/original/k10/advanced_stats",
+    "n_estimators": 50,
+    "test_size": 0.2,
+    "random_state": 42,
+    "cv_folds": 5
+  },
+  "dataset_info": {
+    "data_directory": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_speckle_35/original",
+    "area_name": "sunset",
+    "total_images": 120,
+    "classes": {
+      "garden": 40,
+      "low_veg": 40,
+      "trees": 40
+    },
+    "image_shape": [
+      3,
+      128,
+      128
+    ],
+    "total_features_available": 54,
+    "feature_method": "advanced_stats",
+    "dataset_type": "original",
+    "k_features": 10
+  },
+  "feature_selection": {
+    "method": "SelectKBest_k10",
+    "num_features": 10,
+    "selected_features": [
+      "B_mean",
+      "B_std",
+      "B_var",
+      "B_cv",
+      "B_p10",
+      "B_p25",
+      "B_p50",
+      "B_p75",
+      "B_mad",
+      "B_grad_mean"
+    ],
+    "feature_scores": [
+      0.6692470878516412,
+      0.6041516080448861,
+      0.6021554967900025,
+      0.7991852721938395,
+      0.692733227105754,
+      0.6915284100002015,
+      0.6047488802978778,
+      0.6609067476363009,
+      0.656159840936299,
+      0.5654890076656556
+    ]
+  },
+  "performance": {
+    "test_accuracy": 1.0,
+    "cv_mean_accuracy": 0.9833333333333332,
+    "cv_std_accuracy": 0.03333333333333335,
+    "cv_scores": [
+      0.9166666666666666,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "classification_report": {
+      "garden": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 8.0
+      },
+      "low_veg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 8.0
+      },
+      "trees": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 8.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 24.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 24.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        8
+      ]
+    ]
+  },
+  "model_files": {
+    "trained_model": "trained_model.joblib",
+    "scaler": "scaler.joblib",
+    "feature_selector": "feature_selector.joblib",
+    "feature_names": "feature_names.json"
+  },
+  "timestamp": "2025-07-22T02:46:12.203640"
+}

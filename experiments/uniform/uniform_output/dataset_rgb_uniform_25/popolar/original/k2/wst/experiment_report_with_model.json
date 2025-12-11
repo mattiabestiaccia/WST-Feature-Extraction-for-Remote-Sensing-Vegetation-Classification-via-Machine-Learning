@@ -1,0 +1,114 @@
+{
+  "experiment_name": "wst_popolar_k2_WithModel",
+  "config": {
+    "dataset_path": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_uniform_25/original",
+    "area_name": "popolar",
+    "feature_method": "wst",
+    "k_features": 2,
+    "output_dir": "/home/brusc/Projects/random_forest/experiments_organized/uniform_output/dataset_rgb_uniform_25/popolar/original/k2/wst",
+    "n_estimators": 50,
+    "test_size": 0.2,
+    "random_state": 42,
+    "cv_folds": 5
+  },
+  "dataset_info": {
+    "data_directory": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_uniform_25/original",
+    "area_name": "popolar",
+    "total_images": 121,
+    "classes": {
+      "low_veg": 41,
+      "trees": 40,
+      "water": 40
+    },
+    "image_shape": [
+      3,
+      128,
+      128
+    ],
+    "total_features_available": 486,
+    "feature_method": "wst",
+    "dataset_type": "original",
+    "k_features": 2
+  },
+  "feature_selection": {
+    "method": "SelectKBest_k2",
+    "num_features": 2,
+    "selected_features": [
+      "R_wst_std_0",
+      "G_wst_std_0"
+    ],
+    "feature_scores": [
+      0.9534815030244821,
+      0.9568727848415526
+    ]
+  },
+  "performance": {
+    "test_accuracy": 0.92,
+    "cv_mean_accuracy": 0.9169999999999998,
+    "cv_std_accuracy": 0.02688246020487459,
+    "cv_scores": [
+      0.96,
+      0.9166666666666666,
+      0.9166666666666666,
+      0.9166666666666666,
+      0.875
+    ],
+    "classification_report": {
+      "low_veg": {
+        "precision": 1.0,
+        "recall": 0.7777777777777778,
+        "f1-score": 0.875,
+        "support": 9.0
+      },
+      "trees": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 8.0
+      },
+      "water": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1-score": 0.8888888888888888,
+        "support": 8.0
+      },
+      "accuracy": 0.92,
+      "macro avg": {
+        "precision": 0.9333333333333332,
+        "recall": 0.9259259259259259,
+        "f1-score": 0.9212962962962963,
+        "support": 25.0
+      },
+      "weighted avg": {
+        "precision": 0.9359999999999999,
+        "recall": 0.92,
+        "f1-score": 0.9194444444444444,
+        "support": 25.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        7,
+        0,
+        2
+      ],
+      [
+        0,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        8
+      ]
+    ]
+  },
+  "model_files": {
+    "trained_model": "trained_model.joblib",
+    "scaler": "scaler.joblib",
+    "feature_selector": "feature_selector.joblib",
+    "feature_names": "feature_names.json"
+  },
+  "timestamp": "2025-07-22T05:04:09.860547"
+}

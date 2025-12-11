@@ -1,0 +1,114 @@
+{
+  "experiment_name": "hybrid_assatigue_k2_WithModel",
+  "config": {
+    "dataset_path": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_poisson_40/original",
+    "area_name": "assatigue",
+    "feature_method": "hybrid",
+    "k_features": 2,
+    "output_dir": "/home/brusc/Projects/random_forest/experiments_organized_2/poisson_output/dataset_rgb_poisson_40/assatigue/original/k2/hybrid",
+    "n_estimators": 50,
+    "test_size": 0.2,
+    "random_state": 42,
+    "cv_folds": 5
+  },
+  "dataset_info": {
+    "data_directory": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_poisson_40/original",
+    "area_name": "assatigue",
+    "total_images": 116,
+    "classes": {
+      "low_veg": 40,
+      "water": 40,
+      "trees": 36
+    },
+    "image_shape": [
+      3,
+      128,
+      128
+    ],
+    "total_features_available": 540,
+    "feature_method": "hybrid",
+    "dataset_type": "original",
+    "k_features": 2
+  },
+  "feature_selection": {
+    "method": "SelectKBest_k2",
+    "num_features": 2,
+    "selected_features": [
+      "G_cv",
+      "G_wst_std_0"
+    ],
+    "feature_scores": [
+      0.9128829322874852,
+      0.9170307229261705
+    ]
+  },
+  "performance": {
+    "test_accuracy": 0.875,
+    "cv_mean_accuracy": 0.9307971014492754,
+    "cv_std_accuracy": 0.059141267834031036,
+    "cv_scores": [
+      0.9583333333333334,
+      0.9565217391304348,
+      0.8260869565217391,
+      0.9130434782608695,
+      1.0
+    ],
+    "classification_report": {
+      "low_veg": {
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1-score": 0.7692307692307693,
+        "support": 8.0
+      },
+      "trees": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 8.0
+      },
+      "water": {
+        "precision": 0.7272727272727273,
+        "recall": 1.0,
+        "f1-score": 0.8421052631578947,
+        "support": 8.0
+      },
+      "accuracy": 0.875,
+      "macro avg": {
+        "precision": 0.9090909090909092,
+        "recall": 0.875,
+        "f1-score": 0.8704453441295547,
+        "support": 24.0
+      },
+      "weighted avg": {
+        "precision": 0.9090909090909092,
+        "recall": 0.875,
+        "f1-score": 0.8704453441295547,
+        "support": 24.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        5,
+        0,
+        3
+      ],
+      [
+        0,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        8
+      ]
+    ]
+  },
+  "model_files": {
+    "trained_model": "trained_model.joblib",
+    "scaler": "scaler.joblib",
+    "feature_selector": "feature_selector.joblib",
+    "feature_names": "feature_names.json"
+  },
+  "timestamp": "2025-07-21T21:42:40.989700"
+}

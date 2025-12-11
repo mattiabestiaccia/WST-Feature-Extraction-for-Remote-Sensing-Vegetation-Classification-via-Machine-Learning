@@ -1,0 +1,130 @@
+{
+  "experiment_name": "hybrid_popolar_k10_WithModel",
+  "config": {
+    "dataset_path": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_poisson_40/mini",
+    "area_name": "popolar",
+    "feature_method": "hybrid",
+    "k_features": 10,
+    "output_dir": "/home/brusc/Projects/random_forest/experiments_organized_2/poisson_output/dataset_rgb_poisson_40/popolar/mini/k10/hybrid",
+    "n_estimators": 3,
+    "test_size": 0.2,
+    "random_state": 42,
+    "cv_folds": 5
+  },
+  "dataset_info": {
+    "data_directory": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_poisson_40/mini",
+    "area_name": "popolar",
+    "total_images": 15,
+    "classes": {
+      "low_veg": 5,
+      "trees": 5,
+      "water": 5
+    },
+    "image_shape": [
+      3,
+      128,
+      128
+    ],
+    "total_features_available": 540,
+    "feature_method": "hybrid",
+    "dataset_type": "mini",
+    "k_features": 10
+  },
+  "feature_selection": {
+    "method": "SelectKBest_k10",
+    "num_features": 10,
+    "selected_features": [
+      "R_min",
+      "R_max",
+      "R_range",
+      "R_p10",
+      "G_min",
+      "G_p10",
+      "B_min",
+      "G_wst_std_0",
+      "B_wst_mean_50",
+      "B_wst_mean_58"
+    ],
+    "feature_scores": [
+      1.2313242313242316,
+      1.6679711029711033,
+      1.0452131202131205,
+      1.4447369297369304,
+      0.9851337551337558,
+      1.0355546305546308,
+      1.349657564657565,
+      0.9671178821178827,
+      0.9542607392607398,
+      1.049340104340105
+    ]
+  },
+  "performance": {
+    "test_accuracy": 1.0,
+    "cv_mean_accuracy": 1.0,
+    "cv_std_accuracy": 0.0,
+    "cv_scores": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "classification_report": {
+      "low_veg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "trees": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "water": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 3.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 3.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "model_files": {
+    "trained_model": "trained_model.joblib",
+    "scaler": "scaler.joblib",
+    "feature_selector": "feature_selector.joblib",
+    "feature_names": "feature_names.json"
+  },
+  "timestamp": "2025-07-21T21:02:37.149651"
+}

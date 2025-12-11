@@ -1,0 +1,120 @@
+{
+  "experiment_name": "hybrid_popolar_k5_WithModel",
+  "config": {
+    "dataset_path": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_speckle_55/original",
+    "area_name": "popolar",
+    "feature_method": "hybrid",
+    "k_features": 5,
+    "output_dir": "/home/brusc/Projects/random_forest/experiments_organized/speckle_output/dataset_rgb_speckle_55/popolar/original/k5/hybrid",
+    "n_estimators": 50,
+    "test_size": 0.2,
+    "random_state": 42,
+    "cv_folds": 5
+  },
+  "dataset_info": {
+    "data_directory": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_speckle_55/original",
+    "area_name": "popolar",
+    "total_images": 121,
+    "classes": {
+      "low_veg": 41,
+      "trees": 40,
+      "water": 40
+    },
+    "image_shape": [
+      3,
+      128,
+      128
+    ],
+    "total_features_available": 540,
+    "feature_method": "hybrid",
+    "dataset_type": "original",
+    "k_features": 5
+  },
+  "feature_selection": {
+    "method": "SelectKBest_k5",
+    "num_features": 5,
+    "selected_features": [
+      "B_skew",
+      "B_cv",
+      "B_p25",
+      "R_wst_std_0",
+      "G_wst_std_0"
+    ],
+    "feature_scores": [
+      0.9529833670106544,
+      0.9794531290904003,
+      0.9611706980138515,
+      1.0300230304818225,
+      1.000642353197898
+    ]
+  },
+  "performance": {
+    "test_accuracy": 0.96,
+    "cv_mean_accuracy": 0.959,
+    "cv_std_accuracy": 0.03653917228278592,
+    "cv_scores": [
+      0.92,
+      1.0,
+      1.0,
+      0.9583333333333334,
+      0.9166666666666666
+    ],
+    "classification_report": {
+      "low_veg": {
+        "precision": 1.0,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.9411764705882353,
+        "support": 9.0
+      },
+      "trees": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 8.0
+      },
+      "water": {
+        "precision": 0.8888888888888888,
+        "recall": 1.0,
+        "f1-score": 0.9411764705882353,
+        "support": 8.0
+      },
+      "accuracy": 0.96,
+      "macro avg": {
+        "precision": 0.9629629629629629,
+        "recall": 0.9629629629629629,
+        "f1-score": 0.9607843137254902,
+        "support": 25.0
+      },
+      "weighted avg": {
+        "precision": 0.9644444444444444,
+        "recall": 0.96,
+        "f1-score": 0.96,
+        "support": 25.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        8,
+        0,
+        1
+      ],
+      [
+        0,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        8
+      ]
+    ]
+  },
+  "model_files": {
+    "trained_model": "trained_model.joblib",
+    "scaler": "scaler.joblib",
+    "feature_selector": "feature_selector.joblib",
+    "feature_names": "feature_names.json"
+  },
+  "timestamp": "2025-07-22T03:29:00.974598"
+}

@@ -1,0 +1,150 @@
+{
+  "experiment_name": "advanced_stats_sunset_k20_WithModel",
+  "config": {
+    "dataset_path": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_clean/original",
+    "area_name": "sunset",
+    "feature_method": "advanced_stats",
+    "k_features": 20,
+    "output_dir": "/home/brusc/Projects/random_forest/experiments_organized/gaussian_output/rgb_clean/sunset/original/k20/advanced_stats",
+    "n_estimators": 50,
+    "test_size": 0.2,
+    "random_state": 42,
+    "cv_folds": 5
+  },
+  "dataset_info": {
+    "data_directory": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_clean/original",
+    "area_name": "sunset",
+    "total_images": 120,
+    "classes": {
+      "garden": 40,
+      "low_veg": 40,
+      "trees": 40
+    },
+    "image_shape": [
+      3,
+      128,
+      128
+    ],
+    "total_features_available": 54,
+    "feature_method": "advanced_stats",
+    "dataset_type": "original",
+    "k_features": 20
+  },
+  "feature_selection": {
+    "method": "SelectKBest_k20",
+    "num_features": 20,
+    "selected_features": [
+      "R_std",
+      "R_var",
+      "R_range",
+      "R_iqr",
+      "R_mad",
+      "R_grad_mean",
+      "G_std",
+      "G_var",
+      "G_range",
+      "G_cv",
+      "G_iqr",
+      "G_mad",
+      "G_grad_mean",
+      "B_mean",
+      "B_range",
+      "B_cv",
+      "B_p10",
+      "B_p25",
+      "B_p75",
+      "B_grad_mean"
+    ],
+    "feature_scores": [
+      0.836664772567772,
+      0.8375058020098514,
+      0.675846197375469,
+      0.7794923012184456,
+      0.8313975827869733,
+      0.7240903601791704,
+      0.678287182316454,
+      0.6785517325810042,
+      0.7100265862017556,
+      0.6813165160615355,
+      0.6659923094916589,
+      0.6885098878516596,
+      0.7982746324514876,
+      0.675199168178721,
+      0.6492991132838946,
+      0.8547078883481694,
+      0.6600252440485064,
+      0.6820068238793509,
+      0.6303144468580824,
+      0.8060202480273992
+    ]
+  },
+  "performance": {
+    "test_accuracy": 1.0,
+    "cv_mean_accuracy": 0.9833333333333332,
+    "cv_std_accuracy": 0.03333333333333335,
+    "cv_scores": [
+      0.9166666666666666,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "classification_report": {
+      "garden": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 8.0
+      },
+      "low_veg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 8.0
+      },
+      "trees": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 8.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 24.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 24.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        8
+      ]
+    ]
+  },
+  "model_files": {
+    "trained_model": "trained_model.joblib",
+    "scaler": "scaler.joblib",
+    "feature_selector": "feature_selector.joblib",
+    "feature_names": "feature_names.json"
+  },
+  "timestamp": "2025-07-21T19:03:14.517402"
+}

@@ -1,0 +1,130 @@
+{
+  "experiment_name": "wst_sunset_k10_WithModel",
+  "config": {
+    "dataset_path": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_uniform_40/mini",
+    "area_name": "sunset",
+    "feature_method": "wst",
+    "k_features": 10,
+    "output_dir": "/home/brusc/Projects/random_forest/experiments_organized/uniform_output/dataset_rgb_uniform_40/sunset/mini/k10/wst",
+    "n_estimators": 3,
+    "test_size": 0.2,
+    "random_state": 42,
+    "cv_folds": 5
+  },
+  "dataset_info": {
+    "data_directory": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_uniform_40/mini",
+    "area_name": "sunset",
+    "total_images": 15,
+    "classes": {
+      "garden": 5,
+      "low_veg": 5,
+      "trees": 5
+    },
+    "image_shape": [
+      3,
+      128,
+      128
+    ],
+    "total_features_available": 486,
+    "feature_method": "wst",
+    "dataset_type": "mini",
+    "k_features": 10
+  },
+  "feature_selection": {
+    "method": "SelectKBest_k10",
+    "num_features": 10,
+    "selected_features": [
+      "R_wst_mean_11",
+      "R_wst_mean_12",
+      "R_wst_std_0",
+      "R_wst_std_11",
+      "G_wst_mean_9",
+      "G_wst_mean_10",
+      "G_wst_mean_11",
+      "G_wst_mean_12",
+      "G_wst_mean_13",
+      "G_wst_std_12"
+    ],
+    "feature_scores": [
+      0.9040755540755543,
+      0.9946816146816151,
+      0.9137845487845493,
+      0.9336258186258188,
+      0.8725147075147079,
+      0.953705183705184,
+      0.901482961482962,
+      0.9280149480149484,
+      0.8613482813482816,
+      0.9502371702371706
+    ]
+  },
+  "performance": {
+    "test_accuracy": 0.6666666666666666,
+    "cv_mean_accuracy": 0.7999999999999999,
+    "cv_std_accuracy": 0.16329931618554522,
+    "cv_scores": [
+      0.6666666666666666,
+      0.6666666666666666,
+      1.0,
+      0.6666666666666666,
+      1.0
+    ],
+    "classification_report": {
+      "garden": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "low_veg": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1-score": 0.6666666666666666,
+        "support": 1.0
+      },
+      "trees": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "accuracy": 0.6666666666666666,
+      "macro avg": {
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.5555555555555555,
+        "support": 3.0
+      },
+      "weighted avg": {
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.5555555555555555,
+        "support": 3.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "model_files": {
+    "trained_model": "trained_model.joblib",
+    "scaler": "scaler.joblib",
+    "feature_selector": "feature_selector.joblib",
+    "feature_names": "feature_names.json"
+  },
+  "timestamp": "2025-07-22T05:28:50.455867"
+}

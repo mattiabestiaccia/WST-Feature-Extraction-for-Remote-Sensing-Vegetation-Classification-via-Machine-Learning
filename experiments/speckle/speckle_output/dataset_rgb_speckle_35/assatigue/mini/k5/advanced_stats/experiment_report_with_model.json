@@ -1,0 +1,120 @@
+{
+  "experiment_name": "advanced_stats_assatigue_k5_WithModel",
+  "config": {
+    "dataset_path": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_speckle_35/mini",
+    "area_name": "assatigue",
+    "feature_method": "advanced_stats",
+    "k_features": 5,
+    "output_dir": "/home/brusc/Projects/random_forest/experiments_organized/speckle_output/dataset_rgb_speckle_35/assatigue/mini/k5/advanced_stats",
+    "n_estimators": 3,
+    "test_size": 0.2,
+    "random_state": 42,
+    "cv_folds": 5
+  },
+  "dataset_info": {
+    "data_directory": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_speckle_35/mini",
+    "area_name": "assatigue",
+    "total_images": 15,
+    "classes": {
+      "low_veg": 5,
+      "trees": 5,
+      "water": 5
+    },
+    "image_shape": [
+      3,
+      128,
+      128
+    ],
+    "total_features_available": 54,
+    "feature_method": "advanced_stats",
+    "dataset_type": "mini",
+    "k_features": 5
+  },
+  "feature_selection": {
+    "method": "SelectKBest_k5",
+    "num_features": 5,
+    "selected_features": [
+      "B_skew",
+      "B_cv",
+      "B_p10",
+      "B_p25",
+      "B_p50"
+    ],
+    "feature_scores": [
+      0.8336258186258192,
+      0.8085464535464537,
+      0.8987051837051843,
+      0.8464829614829619,
+      0.8409274059274066
+    ]
+  },
+  "performance": {
+    "test_accuracy": 1.0,
+    "cv_mean_accuracy": 0.9333333333333333,
+    "cv_std_accuracy": 0.13333333333333336,
+    "cv_scores": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.6666666666666666
+    ],
+    "classification_report": {
+      "low_veg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "trees": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "water": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 3.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 3.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "model_files": {
+    "trained_model": "trained_model.joblib",
+    "scaler": "scaler.joblib",
+    "feature_selector": "feature_selector.joblib",
+    "feature_names": "feature_names.json"
+  },
+  "timestamp": "2025-07-22T02:01:33.323478"
+}

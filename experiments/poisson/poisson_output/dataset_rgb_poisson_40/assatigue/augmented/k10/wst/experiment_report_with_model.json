@@ -1,0 +1,130 @@
+{
+  "experiment_name": "wst_assatigue_k10_WithModel",
+  "config": {
+    "dataset_path": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_poisson_40/augmented",
+    "area_name": "assatigue",
+    "feature_method": "wst",
+    "k_features": 10,
+    "output_dir": "/home/brusc/Projects/random_forest/experiments_organized_2/poisson_output/dataset_rgb_poisson_40/assatigue/augmented/k10/wst",
+    "n_estimators": 50,
+    "test_size": 0.2,
+    "random_state": 42,
+    "cv_folds": 5
+  },
+  "dataset_info": {
+    "data_directory": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_poisson_40/augmented",
+    "area_name": "assatigue",
+    "total_images": 1624,
+    "classes": {
+      "low_veg": 560,
+      "water": 560,
+      "trees": 504
+    },
+    "image_shape": [
+      3,
+      128,
+      128
+    ],
+    "total_features_available": 486,
+    "feature_method": "wst",
+    "dataset_type": "augmented",
+    "k_features": 10
+  },
+  "feature_selection": {
+    "method": "SelectKBest_k10",
+    "num_features": 10,
+    "selected_features": [
+      "R_wst_mean_0",
+      "R_wst_std_0",
+      "G_wst_std_0",
+      "B_wst_mean_0",
+      "B_wst_mean_29",
+      "B_wst_mean_31",
+      "B_wst_mean_41",
+      "B_wst_mean_47",
+      "B_wst_mean_48",
+      "B_wst_mean_77"
+    ],
+    "feature_scores": [
+      0.6801079186966883,
+      0.8657308866420601,
+      0.8557784325125166,
+      0.637534097866516,
+      0.5704662410074919,
+      0.5707066841909845,
+      0.5816567251481957,
+      0.5738770775484863,
+      0.585120969339386,
+      0.5702444061379648
+    ]
+  },
+  "performance": {
+    "test_accuracy": 0.9569230769230769,
+    "cv_mean_accuracy": 0.9544330484330483,
+    "cv_std_accuracy": 0.010906399680045333,
+    "cv_scores": [
+      0.9507692307692308,
+      0.9446153846153846,
+      0.9753846153846154,
+      0.9476923076923077,
+      0.9537037037037037
+    ],
+    "classification_report": {
+      "low_veg": {
+        "precision": 0.9298245614035088,
+        "recall": 0.9464285714285714,
+        "f1-score": 0.9380530973451328,
+        "support": 112.0
+      },
+      "trees": {
+        "precision": 1.0,
+        "recall": 0.9900990099009901,
+        "f1-score": 0.9950248756218906,
+        "support": 101.0
+      },
+      "water": {
+        "precision": 0.9459459459459459,
+        "recall": 0.9375,
+        "f1-score": 0.9417040358744395,
+        "support": 112.0
+      },
+      "accuracy": 0.9569230769230769,
+      "macro avg": {
+        "precision": 0.9585901691164849,
+        "recall": 0.9580091937765204,
+        "f1-score": 0.958260669613821,
+        "support": 325.0
+      },
+      "weighted avg": {
+        "precision": 0.9571886056096582,
+        "recall": 0.9569230769230769,
+        "f1-score": 0.9570163426412402,
+        "support": 325.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        106,
+        0,
+        6
+      ],
+      [
+        1,
+        100,
+        0
+      ],
+      [
+        7,
+        0,
+        105
+      ]
+    ]
+  },
+  "model_files": {
+    "trained_model": "trained_model.joblib",
+    "scaler": "scaler.joblib",
+    "feature_selector": "feature_selector.joblib",
+    "feature_names": "feature_names.json"
+  },
+  "timestamp": "2025-07-22T00:03:55.916565"
+}

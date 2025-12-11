@@ -1,0 +1,120 @@
+{
+  "experiment_name": "advanced_stats_popolar_k5_WithModel",
+  "config": {
+    "dataset_path": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_gaussian_50/original",
+    "area_name": "popolar",
+    "feature_method": "advanced_stats",
+    "k_features": 5,
+    "output_dir": "/home/brusc/Projects/random_forest/experiments_organized/gaussian_output/rgb_gaussian50/popolar/original/k5/advanced_stats",
+    "n_estimators": 50,
+    "test_size": 0.2,
+    "random_state": 42,
+    "cv_folds": 5
+  },
+  "dataset_info": {
+    "data_directory": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_gaussian_50/original",
+    "area_name": "popolar",
+    "total_images": 121,
+    "classes": {
+      "low_veg": 41,
+      "trees": 40,
+      "water": 40
+    },
+    "image_shape": [
+      3,
+      128,
+      128
+    ],
+    "total_features_available": 54,
+    "feature_method": "advanced_stats",
+    "dataset_type": "original",
+    "k_features": 5
+  },
+  "feature_selection": {
+    "method": "SelectKBest_k5",
+    "num_features": 5,
+    "selected_features": [
+      "R_p25",
+      "B_skew",
+      "B_cv",
+      "B_p25",
+      "B_p50"
+    ],
+    "feature_scores": [
+      0.8817258818484957,
+      0.8848290372648777,
+      0.883831944990618,
+      0.9031200885849575,
+      0.890339183684115
+    ]
+  },
+  "performance": {
+    "test_accuracy": 0.84,
+    "cv_mean_accuracy": 0.9016666666666666,
+    "cv_std_accuracy": 0.05948856099191582,
+    "cv_scores": [
+      0.8,
+      0.9583333333333334,
+      0.875,
+      0.9166666666666666,
+      0.9583333333333334
+    ],
+    "classification_report": {
+      "low_veg": {
+        "precision": 0.7272727272727273,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.8,
+        "support": 9.0
+      },
+      "trees": {
+        "precision": 1.0,
+        "recall": 0.875,
+        "f1-score": 0.9333333333333333,
+        "support": 8.0
+      },
+      "water": {
+        "precision": 0.8571428571428571,
+        "recall": 0.75,
+        "f1-score": 0.8,
+        "support": 8.0
+      },
+      "accuracy": 0.84,
+      "macro avg": {
+        "precision": 0.8614718614718614,
+        "recall": 0.8379629629629629,
+        "f1-score": 0.8444444444444444,
+        "support": 25.0
+      },
+      "weighted avg": {
+        "precision": 0.8561038961038961,
+        "recall": 0.84,
+        "f1-score": 0.8426666666666668,
+        "support": 25.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        8,
+        0,
+        1
+      ],
+      [
+        1,
+        7,
+        0
+      ],
+      [
+        2,
+        0,
+        6
+      ]
+    ]
+  },
+  "model_files": {
+    "trained_model": "trained_model.joblib",
+    "scaler": "scaler.joblib",
+    "feature_selector": "feature_selector.joblib",
+    "feature_names": "feature_names.json"
+  },
+  "timestamp": "2025-07-21T20:36:21.279097"
+}

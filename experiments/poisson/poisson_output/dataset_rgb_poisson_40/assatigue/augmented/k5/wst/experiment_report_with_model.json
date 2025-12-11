@@ -1,0 +1,120 @@
+{
+  "experiment_name": "wst_assatigue_k5_WithModel",
+  "config": {
+    "dataset_path": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_poisson_40/augmented",
+    "area_name": "assatigue",
+    "feature_method": "wst",
+    "k_features": 5,
+    "output_dir": "/home/brusc/Projects/random_forest/experiments_organized_2/poisson_output/dataset_rgb_poisson_40/assatigue/augmented/k5/wst",
+    "n_estimators": 50,
+    "test_size": 0.2,
+    "random_state": 42,
+    "cv_folds": 5
+  },
+  "dataset_info": {
+    "data_directory": "/home/brusc/Projects/random_forest/datasets/dataset_rgb_poisson_40/augmented",
+    "area_name": "assatigue",
+    "total_images": 1624,
+    "classes": {
+      "low_veg": 560,
+      "water": 560,
+      "trees": 504
+    },
+    "image_shape": [
+      3,
+      128,
+      128
+    ],
+    "total_features_available": 486,
+    "feature_method": "wst",
+    "dataset_type": "augmented",
+    "k_features": 5
+  },
+  "feature_selection": {
+    "method": "SelectKBest_k5",
+    "num_features": 5,
+    "selected_features": [
+      "R_wst_mean_0",
+      "R_wst_std_0",
+      "G_wst_std_0",
+      "B_wst_mean_0",
+      "B_wst_mean_48"
+    ],
+    "feature_scores": [
+      0.6801079186966883,
+      0.8657308866420601,
+      0.8557784325125166,
+      0.6376110683098657,
+      0.585120969339386
+    ]
+  },
+  "performance": {
+    "test_accuracy": 0.9538461538461539,
+    "cv_mean_accuracy": 0.9624425451092119,
+    "cv_std_accuracy": 0.00877489259704024,
+    "cv_scores": [
+      0.9569230769230769,
+      0.96,
+      0.9753846153846154,
+      0.9507692307692308,
+      0.9691358024691358
+    ],
+    "classification_report": {
+      "low_veg": {
+        "precision": 0.9217391304347826,
+        "recall": 0.9464285714285714,
+        "f1-score": 0.933920704845815,
+        "support": 112.0
+      },
+      "trees": {
+        "precision": 1.0,
+        "recall": 0.9900990099009901,
+        "f1-score": 0.9950248756218906,
+        "support": 101.0
+      },
+      "water": {
+        "precision": 0.9454545454545454,
+        "recall": 0.9285714285714286,
+        "f1-score": 0.9369369369369369,
+        "support": 112.0
+      },
+      "accuracy": 0.9538461538461539,
+      "macro avg": {
+        "precision": 0.9557312252964426,
+        "recall": 0.95503300330033,
+        "f1-score": 0.9552941724682142,
+        "support": 325.0
+      },
+      "weighted avg": {
+        "precision": 0.9542328975372453,
+        "recall": 0.9538461538461539,
+        "f1-score": 0.9539494409768591,
+        "support": 325.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        106,
+        0,
+        6
+      ],
+      [
+        1,
+        100,
+        0
+      ],
+      [
+        8,
+        0,
+        104
+      ]
+    ]
+  },
+  "model_files": {
+    "trained_model": "trained_model.joblib",
+    "scaler": "scaler.joblib",
+    "feature_selector": "feature_selector.joblib",
+    "feature_names": "feature_names.json"
+  },
+  "timestamp": "2025-07-21T23:30:58.096053"
+}
