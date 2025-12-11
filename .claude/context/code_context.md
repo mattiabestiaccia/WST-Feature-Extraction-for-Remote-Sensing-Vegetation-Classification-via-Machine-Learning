@@ -5,65 +5,72 @@ Questo progetto implementa un sistema di classificazione di immagini di vegetazi
 
 ---
 
-## Struttura Completa del Progetto
+## Struttura Completa del Progetto (Riorganizzata)
 
 ```
 random_forest/
-├── scripts/                         # Script principali (produzione)
-│   ├── experiments/
-│   │   └── train_and_save_model.py  # Training modelli RF
-│   ├── analysis/                    # Analisi per tipo di rumore
-│   │   ├── analyze_gaussian_experiments.py
-│   │   ├── analyze_poisson_experiments.py
-│   │   ├── analyze_speckle_experiments.py
-│   │   ├── analyze_salt_and_pepper_experiments.py
-│   │   └── analyze_uniform_experiments.py
-│   ├── inference.py                 # Inferenza universale
-│   ├── add_noise.py                 # Generazione rumore
-│   └── compare_wst_coefficients.py  # Confronto WST clean vs noisy
-│
-├── article/                         # Script per paper scientifico
-│   ├── scripts/                     # Mirror di scripts/ per articolo
-│   │   ├── experiments/
-│   │   │   └── train_and_save_model.py
-│   │   ├── analysis/
+├── src/                             # Codice sorgente consolidato
+│   ├── training/
+│   │   └── train_and_save_model.py  # Training modelli Random Forest
+│   ├── preprocessing/
+│   │   └── add_noise.py             # Generazione rumore su immagini
+│   ├── inference/
+│   │   └── inference.py             # Inferenza universale con auto-detection
+│   ├── analysis/
+│   │   ├── per_noise_type/          # Analisi per singolo tipo di rumore
 │   │   │   ├── analyze_gaussian_experiments.py
 │   │   │   ├── analyze_poisson_experiments.py
 │   │   │   ├── analyze_speckle_experiments.py
 │   │   │   ├── analyze_salt_and_pepper_experiments.py
 │   │   │   └── analyze_uniform_experiments.py
-│   │   ├── inference.py
-│   │   ├── add_noise.py
-│   │   └── compare_wst_coefficients.py
-│   │
-│   ├── data_analysis/               # Analisi dati per paper
-│   │   ├── analysis_1/scripts/
-│   │   │   └── robustness_analysis.py      # Analisi robustezza WST vs Stats
-│   │   ├── analysis_1_b/scripts/
-│   │   │   ├── robustness_analysis_v2.py   # Versione 2 analisi robustezza
-│   │   │   └── generate_plots_v2.py        # Generazione grafici v2
-│   │   ├── analysis_2/
-│   │   │   └── comprehensive_analysis.py   # Analisi comprensiva
-│   │   └── analysis_3/
-│   │       └── comprehensive_noise_analysis.py  # Analisi noise aggregata
-│   │
-│   └── features_visual/             # Visualizzazione features
-│       ├── visualize_features.py    # Visualizzazione Advanced Stats vs WST
-│       └── verify_output.py         # Verifica output generati
+│   │   └── aggregate/               # Analisi cross-noise
+│   │       └── (future aggregated analysis scripts)
+│   └── visualization/
+│       ├── compare_wst_coefficients.py  # Confronto WST clean vs noisy
+│       ├── visualize_features.py        # Visualizzazione Stats vs WST
+│       └── verify_output.py             # Verifica output
 │
-├── analisi/                         # Analisi aggregata generale
-│   └── comprehensive_noise_analysis.py
+├── article/                         # Materiale per pubblicazione scientifica
+│   ├── latex/                       # Sorgenti LaTeX paper
+│   │   ├── main.tex
+│   │   ├── bibliography.bib
+│   │   └── images/                  # Immagini nel paper
+│   ├── figures/                     # Figure generate per paper
+│   │   ├── features_visual/         # Visualizzazioni features
+│   │   ├── analysis_plots/          # Grafici analisi statistica
+│   │   └── wst_comparisons/         # Confronti WST
+│   ├── analysis/                    # Script analisi statistica per paper
+│   │   ├── robustness_analysis.py           # Analisi robustezza (v1)
+│   │   ├── robustness_analysis_v2.py        # V2 con FDR correction
+│   │   ├── comprehensive_analysis.py        # Analisi comprensiva
+│   │   ├── comprehensive_noise_analysis.py  # Analisi noise aggregata (principale)
+│   │   └── generate_plots_v2.py             # Generazione grafici pubblicazione
+│   └── revisione/                   # Materiali revisione paper
 │
-├── datasets/                        # Dataset immagini RGB
-├── experiments/                     # Output esperimenti
-└── paper/                           # Output per pubblicazione
+├── experiments/                     # Risultati grid search (~1500 configs)
+│   ├── gaussian/
+│   ├── poisson/
+│   ├── saltpepper/
+│   ├── speckle/
+│   ├── uniform/
+│   └── rgb_clean/
+│
+├── datasets/                        # Dataset immagini RGB (non in git)
+│
+├── docs/                            # Documentazione
+│   └── README.md
+│
+└── .claude/                         # Contesto Claude
+    └── context/
+        ├── code_context.md
+        └── study_context.md
 ```
 
 ---
 
 ## Moduli Principali
 
-### 1. Training (`scripts/experiments/train_and_save_model.py`)
+### 1. Training (`src/training/train_and_save_model.py`)
 
 **Scopo**: Addestra un classificatore Random Forest con feature extraction configurabile.
 
@@ -106,7 +113,7 @@ output_dir/
 
 ---
 
-### 2. Inference (`scripts/inference.py`)
+### 2. Inference (`src/inference/inference.py`)
 
 **Scopo**: Esegue inferenza su dataset usando modelli addestrati, con auto-detection della configurazione.
 
@@ -133,7 +140,7 @@ python inference.py --model-dir /path/to/model [--dataset-type TYPE] [--sample N
 
 ---
 
-### 3. Aggiunta Rumore (`scripts/add_noise.py`)
+### 3. Aggiunta Rumore (`src/preprocessing/add_noise.py`)
 
 **Scopo**: Genera versioni rumorose dei dataset per test di robustezza.
 
@@ -155,7 +162,7 @@ python add_noise.py --noise-type <TYPE> --intensity <0-100> [--input-dir PATH] [
 
 ---
 
-### 4. Confronto WST (`scripts/compare_wst_coefficients.py`)
+### 4. Confronto WST (`src/visualization/compare_wst_coefficients.py`)
 
 **Scopo**: Visualizza differenze nei coefficienti WST tra immagini clean e noisy.
 
@@ -174,7 +181,7 @@ python add_noise.py --noise-type <TYPE> --intensity <0-100> [--input-dir PATH] [
 
 ---
 
-### 5. Analisi Esperimenti (`scripts/analysis/analyze_*_experiments.py`)
+### 5. Analisi Esperimenti (`src/analysis/per_noise_type/analyze_*_experiments.py`)
 
 **Pattern comune** per tutti i tipi di rumore (gaussian, poisson, speckle, salt_and_pepper, uniform).
 
@@ -218,7 +225,7 @@ analysis_output/
 
 ---
 
-### 6. Analisi Aggregata (`analisi/comprehensive_noise_analysis.py`)
+### 6. Analisi Aggregata (Cross-Noise) (`article/analysis/comprehensive_noise_analysis.py`)
 
 **Scopo**: Analisi comparativa su TUTTI i tipi di rumore combinati.
 
@@ -252,7 +259,7 @@ noise_files = {
 
 ---
 
-### 7. Robustness Analysis (`article/data_analysis/analysis_1/scripts/robustness_analysis.py`)
+### 7. Robustness Analysis (`article/analysis/robustness_analysis.py`)
 
 **Scopo**: Analisi statistica rigorosa per paper scientifico (WST vs Advanced Stats).
 
@@ -290,7 +297,7 @@ NOISE_CONFIGS = {
 
 ---
 
-### 8. Visualizzazione Features (`article/features_visual/visualize_features.py`)
+### 8. Visualizzazione Features (`src/visualization/visualize_features.py`)
 
 **Scopo**: Genera visualizzazioni didattiche per spiegare Advanced Stats vs WST.
 
