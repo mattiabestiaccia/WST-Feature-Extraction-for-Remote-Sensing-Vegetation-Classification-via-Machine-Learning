@@ -8,16 +8,12 @@ ENV/
 datasets/
 datasets.zip
 
-# Images (except in article/figures)
+# Images (except in article/latex/images)
 *.tiff
 *.tif
 *.png
 *.jpg
 *.jpeg
-!article/figures/**/*.png
-!article/figures/**/*.jpg
-!article/latex/images/**/*.png
-!article/latex/images/**/*.jpg
 
 # Logs
 *.log
@@ -61,3 +57,14 @@ Thumbs.db
 
 # Claude
 # .claude/
+
+# Article (except abstract and images)
+article/*
+!article/abstract.md
+!article/latex/
+article/latex/*
+!article/latex/images/
+# Re-include PNG/JPG in latex/images
+!article/latex/images/**/*.png
+!article/latex/images/**/*.jpg
+!article/latex/images/**/*.JPG
