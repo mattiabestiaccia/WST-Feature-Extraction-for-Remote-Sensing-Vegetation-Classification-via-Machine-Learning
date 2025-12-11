@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(source:*)",
+      "Bash(python:*)",
+      "Bash(pip3 install:*)",
+      "Bash(pip install:*)",
+      "Bash(mkdir:*)",
+      "Bash(find:*)",
+      "Bash(timeout 1800 python multiband_rf_wst_rotated.py)",
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "Bash(for dir in */)",
+      "Bash(do mkdir -p \"$dirfeature_analysis\")",
+      "Bash(done)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(true)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(python3:*)",
+      "Bash(/home/brusc/Projects/random_forest/venv/bin/pip install pandas matplotlib seaborn --quiet)",
+      "Bash(/home/brusc/Projects/random_forest/venv/bin/python3 /home/brusc/Projects/random_forest/comprehensive_noise_analysis.py)",
+      "Bash(/home/brusc/Projects/random_forest/venv/bin/python3 /home/brusc/Projects/random_forest/analisi_3/wst_vs_hybrid_analysis.py)",
+      "Bash(tree:*)",
+      "Bash(xargs:*)",
+      "Bash(wc:*)",
+      "Bash(md5sum:*)",
+      "Bash(du -sh:*)",
+      "Bash(ln:*)"
+    ],
+    "deny": []
+  }
+}
