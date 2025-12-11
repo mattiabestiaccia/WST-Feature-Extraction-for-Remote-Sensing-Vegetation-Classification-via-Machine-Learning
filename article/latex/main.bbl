@@ -1,0 +1,163 @@
+\begin{thebibliography}{}
+
+\bibitem[Adade et~al., 2021]{adade2021uav}
+Adade, R., Aibinu, A., Ekumah, B., and Asaana, J. (2021).
+\newblock Unmanned aerial vehicle (uav) applications in coastal zone management—a review.
+\newblock {\em Environmental Monitoring and Assessment}, 193:154.
+
+\bibitem[Andreux et~al., 2020]{andreux2020kymatio}
+Andreux, M., Angles, T., Exarchakis, G., Leonarduzzi, R., Rochette, G., Thiry, L., Zarka, J., Mallat, S., And{\'e}n, J., Belilovsky, E., Bruna, J., Lostanlen, V., Chaudhary, M., Hirn, M., Oyallon, E., Zhang, S., Cella, C., and Eickenberg, M. (2020).
+\newblock Kymatio: Scattering transforms in python.
+\newblock {\em Journal of Machine Learning Research}, 21(60):1--6.
+
+\bibitem[Barbier et~al., 2011]{barbier2011value}
+Barbier, E., Hacker, S., Kennedy, C., Koch, E., Stier, A., and Silliman, B. (2011).
+\newblock The value of estuarine and coastal ecosystem services.
+\newblock {\em Ecological Monographs}, 81(2):169--193.
+
+\bibitem[Benjamini and Hochberg, 1995]{Benjamini1995}
+Benjamini, Y. and Hochberg, Y. (1995).
+\newblock Controlling the false discovery rate: A practical and powerful approach to multiple testing.
+\newblock {\em Journal of the Royal Statistical Society: Series B (Methodological)}, 57(1):289--300.
+
+\bibitem[Breiman, 2001]{Breiman2001}
+Breiman, L. (2001).
+\newblock Random forests.
+\newblock {\em Machine Learning}, 45(1):5--32.
+
+\bibitem[Bruna and Mallat, 2013]{Bruna2013Invariant}
+Bruna, J. and Mallat, S. (2013).
+\newblock Invariant scattering convolution networks.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}, 35(8):1872--1886.
+
+\bibitem[Cohen, 1988]{Cohen1988}
+Cohen, J. (1988).
+\newblock {\em Statistical Power Analysis for the Behavioral Sciences}.
+\newblock Lawrence Erlbaum Associates, Hillsdale, NJ, 2nd edition.
+
+\bibitem[Correll et~al., 2019]{Correll2019}
+Correll, M.~D., Hantson, W., Hodgman, T.~P., Cline, B.~B., Elphick, C.~S., Shriver, G.~W., Tymkiw, E.~L., and Olsen, B.~J. (2019).
+\newblock Fine-scale mapping of coastal plant communities in the northeastern usa.
+\newblock {\em Wetlands}, 39(1):17--28.
+
+\bibitem[Doughty and Cavanaugh, 2019]{doughty2019mapping}
+Doughty, C. and Cavanaugh, K. (2019).
+\newblock Mapping coastal wetland biomass from high resolution uav imagery.
+\newblock {\em Remote Sensing}, 11:540.
+
+\bibitem[Kohavi, 1995]{kohavi1995crossvalidation}
+Kohavi, R. (1995).
+\newblock A study of cross-validation and bootstrap for accuracy estimation and model selection.
+\newblock In {\em Proceedings of the 14th International Joint Conference on Artificial Intelligence (IJCAI)}, volume~2, pages 1137--1143, Montreal, Canada.
+
+\bibitem[Lewis et~al., 2020]{lewis2020retrieval}
+Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.-t., Rockt{\"a}schel, T., Riedel, S., and Kiela, D. (2020).
+\newblock Retrieval-augmented generation for knowledge-intensive nlp tasks.
+\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS)}.
+
+\bibitem[Lloret et~al., 2021]{lloret2020microplastics}
+Lloret, J., Marin, A., Marin-Guirao, L., and Martinez-Lopez, J. (2021).
+\newblock Salt marsh sediments act as sinks for microplastics and reveal effects of current and historical land use changes.
+\newblock {\em Environmental Pollution}, 268:115546.
+
+\bibitem[Ma et~al., 2016]{Ma}
+Ma, Y., Zhang, J., and Zhang, J. (2016).
+\newblock Analysis of unmanned aerial vehicle (uav) hyperspectral remote sensing monitoring key technology in coastal wetland.
+\newblock page 97962S.
+
+\bibitem[Mallat, 2012]{Mallat2012}
+Mallat, S. (2012).
+\newblock Group invariant scattering.
+\newblock {\em Communications on Pure and Applied Mathematics}, 65(10):1331--1398.
+
+\bibitem[Mavroudis, 2024]{LangChain}
+Mavroudis, V. (2024).
+\newblock Langchain.
+
+\bibitem[Mitsch et~al., 2013]{Mitsch2013}
+Mitsch, W.~J., Bernal, B., Nahlik, A.~M., Mander, {\"U}., Zhang, L., Anderson, C.~J., J{\o}rgensen, S.~E., and Brix, H. (2013).
+\newblock Wetlands, carbon, and climate change.
+\newblock {\em Landscape Ecology}, 28(4):583--597.
+
+\bibitem[{n8n.io}, 2025]{n8n}
+{n8n.io} (2025).
+\newblock {n8n}: Workflow automation tool.
+\newblock Accessed: 2025-11-16.
+
+\bibitem[Nardin et~al., 2021]{nardin2020ndvi}
+Nardin, W., Locatelli, S., Pasquarella, V., Rulli, M.~C., Daly, K., and Vona, I. (2021).
+\newblock Seasonality and characterization mapping of restored tidal marsh by ndvi imageries coupling uavs and multispectral camera.
+\newblock {\em Remote Sensing}, 13(21):4207.
+
+\bibitem[Pedregosa et~al., 2011]{scikit-learn}
+Pedregosa, F., Varoquaux, G., Gramfort, A., et~al. (2011).
+\newblock {\em scikit-learn: Machine Learning in {P}ython}.
+\newblock Version 1.7.2, documentation at \url{https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html}.
+
+\bibitem[Peng et~al., 2005]{Peng2005Feature}
+Peng, H., Long, F., and Ding, C. (2005).
+\newblock Feature selection based on mutual information: criteria of max-dependency, max-relevance, and min-redundancy.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}, 27(8):1226--1238.
+
+\bibitem[Powers, 2011]{Powers2011}
+Powers, D. (2011).
+\newblock Evaluation: From precision, recall and f-measure to roc, informedness, markedness and correlation.
+\newblock {\em Journal of Machine Learning Technologies}, 2(1):37--63.
+
+\bibitem[Shapiro and Wilk, 1965]{Shapiro1965Analysis}
+Shapiro, S.~S. and Wilk, M.~B. (1965).
+\newblock An analysis of variance test for normality (complete samples).
+\newblock {\em Biometrika}, 52(3-4):591--611.
+
+\bibitem[Szeghalmy and Fazekas, 2023]{szeghalmy2023scv}
+Szeghalmy, S. and Fazekas, A. (2023).
+\newblock A comparative study of the use of stratified cross-validation and distribution-balanced stratified cross-validation in imbalanced learning.
+\newblock {\em Sensors}, 23(4):2333.
+
+\bibitem[Valiela et~al., 2018]{VALIELA20181148}
+Valiela, I., Lloret, J., Bowyer, T., Miner, S., Remsen, D., Elmstrom, E., Cogswell, C., and {Robert Thieler}, E. (2018).
+\newblock Transient coastal landscapes: Rising sea level threatens salt marshes.
+\newblock {\em Science of The Total Environment}, 640-641:1148--1156.
+
+\bibitem[Virtanen et~al., 2020]{Virtanen2020SciPy}
+Virtanen, P., Gommers, R., and {SciPy 1.0 Contributors} (2020).
+\newblock Scipy 1.0: fundamental algorithms for scientific computing in python.
+\newblock {\em Nature Methods}, 17:261--272.
+
+\bibitem[Wan et~al., 2014]{wan2014spartina}
+Wan, H., Wang, Q., Jiang, D., Fu, J., Yang, Y., and Liu, X. (2014).
+\newblock Monitoring the invasion of spartina alterniflora using very high resolution uav imagery in beihai, guangxi (china).
+\newblock {\em Scientific World Journal}, page 638296.
+
+\bibitem[Wilcoxon, 1945]{Wilcoxon1945Individual}
+Wilcoxon, F. (1945).
+\newblock Individual comparisons by ranking methods.
+\newblock {\em Biometrics Bulletin}, 1(6):80--83.
+
+\bibitem[Witten et~al., 2016]{witten2016valutazione}
+Witten, I.~H., Frank, E., Hall, M.~A., and Pal, C.~J. (2016).
+\newblock {\em Data Mining: Practical Machine Learning Tools and Techniques}.
+\newblock Morgan Kaufmann, Burlington, MA.
+\newblock ``Valutazione delle prestazioni predittive''.
+
+\bibitem[Worm et~al., 2006]{worm2006impacts}
+Worm, B., Barbier, E., Beaumont, N., Duffy, J., Folke, C., Halpern, B., Jackson, J., Lotze, H., Micheli, F., Palumbi, S., et~al. (2006).
+\newblock Impacts of biodiversity loss on ocean ecosystem services.
+\newblock {\em Science}, 314(5800):787--790.
+
+\bibitem[Xue and Su, 2017]{Xue2017Significant}
+Xue, J. and Su, B. (2017).
+\newblock Significant remote sensing vegetation indices: A review of developments and applications.
+\newblock {\em Journal of Sensors}, 2017:1353691.
+
+\bibitem[Zedler and Kercher, 2005]{zedler2005wetland}
+Zedler, J. and Kercher, S. (2005).
+\newblock Wetland resources: Status, trends, ecosystem services, and restorability.
+\newblock {\em Annual Review of Environment and Resources}, 30:39--74.
+
+\bibitem[Zhang and Kovacs, 2012]{Zhang2016Remote}
+Zhang, C. and Kovacs, J.~M. (2012).
+\newblock The application of small unmanned aerial systems for precision agriculture: a review.
+\newblock {\em Precision Agriculture}, 13(6):693--712.
+
+\end{thebibliography}

@@ -1,0 +1,274 @@
+# Image Labels and Descriptions
+# Research Paper: Wavelet Scattering Transform for Vegetation Classification
+# Generated: 2025-11-12
+
+===============================================================================
+STUDY AREA IMAGES
+===============================================================================
+
+site_poplar_island_aerial.JPG
+Label: Aerial view of Poplar Island study site
+Description: Drone photograph showing the Poplar Island area characterized by
+forest vegetation cover. This site represents one of the three land cover
+classes (popolar/forest) used in the classification study.
+Reference in main.tex: Line 132
+Paper Section: Materials and Methods - Study Area and Data Acquisition - Study Sites
+
+site_assateague_island_aerial.JPG
+Label: Aerial view of Assateague Island study site
+Description: Drone photograph showing the Assateague Island area characterized
+by farmland and agricultural vegetation. This site represents the assatigue
+land cover class used in the classification experiments.
+Reference in main.tex: Line 137
+Paper Section: Materials and Methods - Study Area and Data Acquisition - Study Sites
+
+site_sunset_island_aerial.JPG
+Label: Aerial view of Sunset Island study site
+Description: Drone photograph showing the Sunset Island area characterized by
+urban and suburban development. This site represents the sunset/urban land
+cover class in the three-class classification problem.
+Reference in main.tex: Line 146
+Paper Section: Materials and Methods - Study Area and Data Acquisition - Study Sites
+
+study_area_chesapeake_bay_map.png
+Label: Geographic location of study sites in Chesapeake Bay
+Description: Map showing the spatial distribution of the three study sites
+(Assateague Island, Poplar Island, and Sunset Island) within the Chesapeake
+Bay region. Provides geographic context for the research area.
+Reference in main.tex: Line 151
+Paper Section: Materials and Methods - Study Area and Data Acquisition - Study Sites
+
+===============================================================================
+METHODOLOGY WORKFLOW DIAGRAMS
+===============================================================================
+
+workflow_feature_extraction_pipeline.png
+Label: Feature extraction methodology pipeline (Flow 1)
+Description: Flowchart illustrating the complete feature extraction pipeline,
+showing the three methods: Advanced Statistics (54 features), Wavelet
+Scattering Transform (60-80 features), and Hybrid approach (120-140 features).
+Demonstrates how RGB images are processed to generate feature vectors.
+Reference in main.tex: Line 357
+Paper Section: Materials and Methods - Statistical Analysis
+
+workflow_classification_validation.png
+Label: Classification and validation workflow (Flow 2)
+Description: Flowchart depicting the machine learning pipeline including
+standardization, feature selection (SelectKBest), Random Forest training,
+and cross-validation strategy. Shows the complete experimental workflow from
+features to performance metrics.
+Reference in main.tex: Line 435
+Paper Section: Materials and Methods - Statistical Analysis - Experimental Design
+
+===============================================================================
+EXPERIMENTAL RESULTS VISUALIZATIONS
+===============================================================================
+
+results_performance_delta_heatmap.png
+Label: Performance delta heatmap across experimental conditions
+Description: Heatmap visualization showing the accuracy differences (deltas)
+across different experimental configurations including dataset sizes, feature
+methods, k-values, and noise conditions. Provides comprehensive overview of
+performance variations.
+Reference in main.tex: Line 820
+Paper Section: Results - Delta Heatmap (vs Advanced Stats)
+
+results_data_scarcity_retention.png
+Label: Performance retention under data scarcity (Interaction Panel 1)
+Description: Panel visualization showing how different feature extraction
+methods (Advanced Stats, WST, Hybrid) maintain classification accuracy across
+varying dataset sizes (mini, small, original). Demonstrates robustness to
+limited training data.
+Reference in main.tex: Line 762
+Paper Section: Results - Data Scarcity Retention
+
+results_feature_selection_impact.png
+Label: Impact of k-features selection on accuracy
+Description: Line plots showing how classification accuracy varies with the
+number of selected features (k=2, 5, 10, 20) for each feature extraction
+method. Illustrates the optimal feature selection strategy and diminishing
+returns beyond k=10-20.
+Reference in main.tex: Line 845
+Paper Section: Results - K-Features Impact
+
+results_noise_performance_by_type.png
+Label: Classification performance by noise type (Panel 1)
+Description: Comparative visualization showing accuracy degradation under
+different noise conditions (Gaussian, Poisson, Salt & Pepper, Speckle,
+Uniform) relative to clean baseline. Demonstrates differential noise
+robustness of the three methods.
+Reference in main.tex: Line 702
+Paper Section: Results - Statistical Analysis Results - Noise Robustness Analysis
+
+results_noise_intensity_degradation.png
+Label: Performance degradation with increasing noise intensity (Panel 2)
+Description: Line plots showing how classification accuracy decreases as
+noise intensity increases for different noise types. Quantifies the
+relationship between noise strength and classification performance,
+particularly for Gaussian noise (σ=30 vs σ=50).
+Reference in main.tex: Line 687
+Paper Section: Results - Statistical Analysis Results - Noise Robustness Analysis
+
+results_noise_method_heatmap.png
+Label: Method-specific noise robustness heatmap (Panel 4)
+Description: Heatmap showing accuracy values for each feature method under
+different noise conditions. Highlights that WST maintains highest performance
+under noise, demonstrating superior robustness compared to Advanced Statistics
+and Hybrid approaches.
+Reference in main.tex: Line 693
+Paper Section: Results - Statistical Analysis Results - Noise Robustness Analysis
+
+results_performance_by_noise_type.png
+Label: Comprehensive performance comparison across noise types
+Description: Bar chart or similar visualization comparing classification
+accuracy of all three methods (Advanced Stats, WST, Hybrid) across all tested
+noise conditions. Provides direct performance comparison across experimental
+conditions.
+Reference in main.tex: Line 779
+Paper Section: Results - Performance by Noise Type
+
+results_performance_distribution.png
+Label: Overall performance distribution across experiments
+Description: Distribution plot (box plots, violin plots, or histograms)
+showing the spread of accuracy values across all 758+ experiments. Illustrates
+the overall performance characteristics and variability of the classification
+system.
+Reference in main.tex: Line 836
+Paper Section: Results - Performance Distribution
+
+===============================================================================
+PAPER TABLES (SCREENSHOTS FROM PRESENTATION)
+===============================================================================
+
+table01_noise_dataset_summary.png
+Label: Noise Dataset Summary (Table 1)
+Description: Summary table showing all noise types tested in the study with
+their intensity levels (Low, Moderate, High) and total variants. Includes
+Gaussian, Poisson, Salt & Pepper, Speckle, Uniform noise types, plus clean
+baseline, totaling 14 datasets.
+Paper Section: Materials and Methods - Dataset and Data Organization
+Reference in main.tex: Line 182 (tab:noise_summary)
+
+table02_statistical_features_complete.png
+Label: Complete Set of Statistical Features (Table 2)
+Description: Comprehensive table listing all 18 statistical features extracted
+per RGB channel (54 total features). Features are organized by category: Basic
+Statistics (mean, std, variance, min/max, range), Shape Statistics (skewness,
+kurtosis, CV), Robust/Percentile Stats (10th/25th/50th/75th/90th percentiles,
+IQR, MAD), and Spatial Features (gradient mean, edge density).
+Paper Section: Materials and Methods - Feature Extraction and Feature Selection
+Reference in main.tex: Line 227 (tab:stat_features)
+
+table03_random_forest_hyperparameters.png
+Label: Random Forest Hyperparameters and Configuration (Table 3)
+Description: Table detailing the Random Forest hyperparameters used in all
+experiments including n_estimators (3 for mini, 10 for small, 50 for original),
+criterion (Gini impurity), max_depth (None), min_samples_split (2),
+min_samples_leaf (1), max_features (sqrt), bootstrap (True), and random_state
+(42 for reproducibility).
+Paper Section: Materials and Methods - Classification through Random Forest
+Reference in main.tex: Line 277 (tab:rf_hyperparams)
+
+table04_experimental_dataset_factors.png
+Label: Overview of Experimental Dataset Factors (Table 4)
+Description: High-level summary of the factorial design showing all experimental
+factors: Geographic Areas (Assateague, Poplar, Sunset - 3 levels), Dataset Sizes
+(mini ~5, small ~15, original ~40 img/class - 3 levels), Feature Methods
+(advanced_stats, wst, hybrid - 3 levels), K-best Values (2, 5, 10, 20 - 4 levels),
+Noise Types (clean, gaussian, poisson, saltpepper, speckle, uniform - 6 levels),
+and Land Cover Classes (3 per area).
+Paper Section: Materials and Methods - Statistical Analysis - Dataset Composition
+Reference in main.tex: Line 383 (tab:dataset_factors)
+
+table05_noise_types_intensity_levels.png
+Label: Noise Types and Tested Intensity Levels (Table 5)
+Description: Detailed table showing noise types with their specific intensity
+parameters. Clean (1 level, no corruption), Gaussian (2 levels: σ=30, 50),
+Poisson (2 levels: λ=40, 60), Salt & Pepper (3 levels: p=5%, 15%, 25%),
+Speckle (3 levels: σ²=15, 35, 55), Uniform (3 levels: r=10, 25, 40).
+Paper Section: Materials and Methods - Statistical Analysis - Dataset Composition
+Reference in main.tex: Line 402 (tab:noise_intensities)
+
+table06_full_factorial_configuration.png
+Label: Full Factorial Configuration of Experiments (Table 6)
+Description: Complete experimental design table showing all parameters and their
+levels, including detailed noise intensity breakdown. Shows how 3 sizes × 3 areas
+× 3 methods × 4 k-values × 14 noise variants = 1,512 total experiments.
+Paper Section: Materials and Methods - Statistical Analysis - Experimental Design
+Reference in main.tex: Line 446 (full factorial configuration table)
+
+table07_performance_metrics_evaluation.png
+Label: Performance Metrics Extracted for Each Experiment (Table 7)
+Description: Table listing all evaluation metrics computed for each of the 1,512
+experiments: Test Accuracy (20% hold-out), Macro-averaged F1-score, Macro-averaged
+Precision, Macro-averaged Recall, Cross-validation Scores (5-fold stratified CV
+mean and std), and Confusion Matrix (3×3 class-wise prediction distribution).
+Paper Section: Materials and Methods - Statistical Analysis
+Reference in main.tex: Line 473 (tab:evaluation_metrics)
+
+table09_statistical_comparison_wst_hybrid.png
+Label: Statistical Comparison Between WST and Hybrid vs Advanced Statistics (Table 9)
+Description: Key results table showing statistical comparison metrics including
+sample size (n=168), mean delta, median delta, Shapiro-Wilk p-value (both
+non-normal), Wilcoxon p-values (raw and FDR-corrected), significance at α=0.05
+(WST: NO, Hybrid: YES), and Cohen's d effect sizes (WST: -0.075 small negative,
+Hybrid: +0.156 small positive).
+Paper Section: Results - Statistical Analysis Results
+Reference in main.tex: Line 654 (tab:combined_stats)
+
+table10_noise_robustness_regression_slope.png
+Label: Noise Robustness Measured Through Regression Slope (Table 10)
+Description: Table showing mean and standard deviation of regression slopes
+(Accuracy vs. Noise Intensity) for each method. Hybrid: -0.000894±0.004367,
+WST: -0.001180±0.005521, Advanced Stats: -0.002068±0.004328. Less negative
+slope indicates better noise robustness.
+Paper Section: Results - Statistical Analysis Results
+Reference in main.tex: Line 720 (noise robustness slopes table)
+
+table11_performance_retention_data_scarcity.png
+Label: Performance Retention Under Data Scarcity (Table 11)
+Description: Table showing performance retention percentages relative to original
+dataset size for all three methods. Mini (~5 img/class): Advanced Stats 94.99±12.41%,
+WST 94.05±13.04%, Hybrid 94.90±12.40%. Small (~15 img/class): Advanced Stats
+98.05±4.35%, WST 94.60±4.78%, Hybrid 95.72±4.97%. Original set as 100% baseline.
+Paper Section: Results - Statistical Analysis Results - Data Scarcity Analysis
+Reference in main.tex: Line 744 (data scarcity performance table)
+
+table12_data_scarcity_results.png
+Label: Data Scarcity Performance Retention Results (Table 12)
+Description: Formatted version of data scarcity results showing retention
+percentages by method and dataset size. Same data as Table 11 but with different
+layout emphasizing method comparison across mini and small dataset configurations.
+Paper Section: Results - Data Scarcity Retention
+Reference in main.tex: Line 794 (tab:data_scarcity_results)
+
+table13_detailed_statistical_comparison.png
+Label: Detailed Statistical Comparison of Feature Extraction Methods (Table 13)
+Description: Comprehensive statistical test results table showing Wilcoxon
+signed-rank tests with Benjamini-Hochberg FDR correction for both Macro-F1 Score
+and Accuracy metrics. Includes comparison type, n (168 paired observations),
+mean delta, Cohen's d, p-value, and significance. Shows Hybrid significantly
+outperforms Advanced Stats on Macro-F1 (p=0.0390, d=+0.156), but not on Accuracy.
+Paper Section: Results - Statistical Significance Matrix
+Reference in main.tex: Line 875 (tab:statistical_tests_detailed)
+
+===============================================================================
+SUMMARY STATISTICS
+===============================================================================
+
+Total Images in main directory: 14
+Study Site Photos: 4 (.JPG format)
+Methodology Diagrams: 2 (.png format)
+Results Visualizations: 8 (.png format)
+
+Total Tables in image_presentation directory: 12
+(Note: Table 8 is missing from the presentation screenshots)
+
+Main Findings Illustrated:
+- WST achieves highest average accuracy (~91.3%)
+- ~11.4% accuracy drop from clean to Gaussian σ=50
+- ~7.4% improvement from mini to original dataset size
+- k=10-20 provides optimal performance/complexity tradeoff
+- WST shows superior noise robustness across all conditions
+
+===============================================================================

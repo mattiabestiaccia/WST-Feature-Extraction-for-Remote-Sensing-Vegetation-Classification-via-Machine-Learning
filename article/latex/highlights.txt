@@ -1,0 +1,7 @@
+Highlights
+
+• Hybrid WST+statistics features improve F1 by 1.7% vs statistics alone (p=0.039)
+• All methods retain >94% accuracy with only 5 images/class (extreme scarcity)
+• Hybrid degrades 131% slower than statistics under increasing noise intensity
+• WST alone shows no significant advantage; benefits only when combined
+• 1,512 experiments systematically tested across 6 noise types and 3 dataset sizes
