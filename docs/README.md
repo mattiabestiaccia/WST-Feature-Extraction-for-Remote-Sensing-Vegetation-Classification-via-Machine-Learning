@@ -293,29 +293,29 @@ The analysis includes publication-ready plots:
 ### Study Area
 Our research focuses on three coastal wetland sites in the Chesapeake Bay region (Maryland, USA):
 
-![Study Area Map](../article/latex/images/study_area_chesapeake_bay_map.png)
+![Study Area Map](article/latex/images/study_area_chesapeake_bay_map.png)
 *Chesapeake Bay study area showing the three monitored sites*
 
 ### Performance Comparison
 
 #### Noise Robustness Across Methods
-![Performance by Noise Type](../article/latex/images/results_performance_by_noise_type.png)
+![Performance by Noise Type](article/latex/images/results_performance_by_noise_type.png)
 *Classification performance degradation across different noise types. Hybrid features demonstrate superior robustness.*
 
 #### Feature Selection Impact
-![Feature Selection Impact](../article/latex/images/results_feature_selection_impact.png)
+![Feature Selection Impact](article/latex/images/results_feature_selection_impact.png)
 *Effect of feature count (K) on classification accuracy. Optimal performance achieved with K=10-20 features.*
 
 #### Data Scarcity Analysis
-![Data Scarcity Retention](../article/latex/images/results_data_scarcity_retention.png)
+![Data Scarcity Retention](article/latex/images/results_data_scarcity_retention.png)
 *Performance retention under extreme data scarcity conditions (mini vs original dataset).*
 
 ### Workflow Pipeline
 
-![Feature Extraction Pipeline](../article/latex/images/workflow_feature_extraction_pipeline.png)
+![Feature Extraction Pipeline](article/latex/images/workflow_feature_extraction_pipeline.png)
 *Complete feature extraction and classification workflow*
 
-![Classification Validation](../article/latex/images/workflow_classification_validation.png)
+![Classification Validation](article/latex/images/workflow_classification_validation.png)
 *Cross-validation and model evaluation workflow*
 
 ---
